@@ -1,16 +1,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <ContactDetails
-    name="Mxcç-Rahman Pabel"
-    websiteAddress="www.2go.com"
-    address="Noakhali"
-  />
-  <ContactDetails
-    name="Pabel"
-    websiteAddress="www.3go.com"
-    address="Chittagong"
-  />
-  <ContactDetails name="Mahbub" websiteAddress="www.go.com" address="Dhaka" />
+    v-for="contact in contacts"
+    :key="contact.name"
+    :name="contact.name"
+    :address="contact.address"
+    :website="contact.website"
+  ></ContactDetails>
 </template>
 
 <script>
@@ -20,6 +16,15 @@ export default {
   name: "App",
   components: {
     ContactDetails,
+  },
+  data() {
+    return {
+      contacts: [
+        { name: "Mahbub", website: "www.profile.com", address: "Dhaka" },
+        { name: "Pabel", website: "www.ghghgh.com", address: "Tokyo" },
+        { name: "Rahman", website: "www.pabelmahbub.com", address: "Noakhali" },
+      ],
+    };
   },
 };
 </script>

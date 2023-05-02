@@ -2,18 +2,20 @@
   <div class="contact-details">
     <h1 class="contact-heading">Contact:</h1>
     <p>Name: {{ name }}</p>
-    <p>Website: {{ websiteAddress }}</p>
+    <p>Website: {{ website }}</p>
     <p>Address: {{ address }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["name", "websiteAddress", "address"],
+  props: {
+    name: { type: String },
+    website: { type: String, require: true, default: "https://go.com" },
+    address: { type: String, required: true, default: "Bangladesh" },
+  },
   data() {
-    return {
-      // name: "Pabel Mahbub",
-    };
+    return {};
   },
 };
 </script>
