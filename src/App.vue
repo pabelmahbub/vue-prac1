@@ -1,15 +1,25 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <ContactDetails
+    name="Mxcç-Rahman Pabel"
+    websiteAddress="www.2go.com"
+    address="Noakhali"
+  />
+  <ContactDetails
+    name="Pabel"
+    websiteAddress="www.3go.com"
+    address="Chittagong"
+  />
+  <ContactDetails name="Mahbub" websiteAddress="www.go.com" address="Dhaka" />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import ContactDetails from "./components/ContactDetails.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    ContactDetails,
   },
 };
 </script>
